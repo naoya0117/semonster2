@@ -8,5 +8,11 @@ public class Monster {
         this.name = name;
         this.rare = rare;
     }
+
+    @Override
+    public String toString() {
+        // TODO Auto-generated method stub
+        return this.name + ":レア度[" + this.rare + ']';
+    }
 }
 
