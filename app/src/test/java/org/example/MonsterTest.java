@@ -12,5 +12,11 @@ public class MonsterTest {
         assertEquals(expected1, monster.name);
         assertEquals(expected2, monster.rare);
     }
+
+    @Test public void monsterString(){
+        Monster monster = new Monster("デュラハン", 0);
+        String expected = "デュラハン:レア度[0]";
+        assertEquals(expected, monster.toString());
+    }
     
 }
