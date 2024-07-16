@@ -35,10 +35,10 @@ public class MonsterTest {
         assertEquals("スライム", monster.name);
 
         monster.summonMonster(3);
-        assertEquals("デュラハンナイト", monster.name);
+        assertEquals("デュラハン", monster.name);
 
         monster.summonMonster(4);
-        assertEquals("ドラゴンロード", monster.name);
+        assertEquals("ドラゴン", monster.name);
     }
 
     @Test(expected = IllegalArgumentException.class)
