@@ -10,6 +10,7 @@ public class Player {
     int numOfMonsters = 8;
     LinkedList<Integer> randomRarityNumberLists; // 0-4のランダムなレア度の数値を保持する
     LinkedList<Integer> randomMonsterNumberLists; // 0-4のランダムなモンスターの数値を保持する
+    int listIndex;
 
     public Player(String userName, int hp) {
         this.name = userName;
@@ -29,9 +30,10 @@ public class Player {
      * モンスタをドローして手札に加える関数
      */
     public void drawMonsterDeck() {
-        Monster monster = new Monster("", this.randomRarityNumberLists.pop());
-        monster.summonMonster(this.randomMonsterNumberLists.pop());
+        Monster monster = new Monster("", this.randomRarityNumberLists.get(this.listIndex));
+        monster.summonMonster(this.randomMonsterNumberLists.get(this.listIndex));
         this.monsterDeck.add(monster);
+        this.listIndex++;
     }
 
     /**
