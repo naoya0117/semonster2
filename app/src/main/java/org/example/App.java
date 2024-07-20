@@ -10,6 +10,6 @@ public class App {
 
     public static void main(String[] args) {
         System.out.println(new App().getGreeting());
-        System.out.println(new Player("user").toString());
+        System.out.println(new Player("user", 1000).toString());
     }
 }
