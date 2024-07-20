@@ -12,4 +12,14 @@ public class SeMonsterGameTest {
         String expected = "user";
         assertEquals(expected, game.players.get(expected).name);
     }
+
+    @Test
+    public void checkPlayerHandnum(){
+        SeMonsterGame game = new SeMonsterGame();
+        String playerName = "user";
+        game.addPlayer(playerName);
+        game.draw(playerName);
+        int expected = 9;
+        assertEquals(expected, game.players.get(playerName).monsterDeck.size());
+    }
 }
